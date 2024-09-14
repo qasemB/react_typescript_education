@@ -6,13 +6,13 @@ type UserInfoType = {
     age: number
 }
 type UserContextType = {
-    userInfo: UserInfoType | undefined
-    setUserInfo: React.Dispatch<React.SetStateAction<UserInfoType | undefined>>
+    userInfo: UserInfoType
+    setUserInfo: React.Dispatch<React.SetStateAction<UserInfoType>>
 }
-export const UserContext = createContext<UserContextType | null>(null)
+export const UserContext = createContext({} as UserContextType)
 
 const UserContextProvider = ({children}: {children: React.ReactNode}) => {
-    const [userInfo,setUserInfo] = useState<UserInfoType>()
+    const [userInfo,setUserInfo] = useState({} as UserInfoType)
     return (
         <UserContext.Provider value={{
             userInfo,

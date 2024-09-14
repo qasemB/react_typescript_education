@@ -4,11 +4,11 @@ import UserInfoComponent from "./components/UserInfoComponent"
 
 function App() {
 
-  const context = useContext(UserContext)
+  const {setUserInfo} = useContext(UserContext)
 
   useEffect(() => {
 
-    context?.setUserInfo({
+    setUserInfo({
       name: "qasem",
       family: "bassaki",
       age: 36

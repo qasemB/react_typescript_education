@@ -1,10 +1,10 @@
 import { useContext, useEffect } from "react"
 import { UserContext } from "./context/UserContext"
-import UserInfoComponent from "./components/UserInfoComponent"
+import ClassComponent from "./components/ClassComponent"
 
 function App() {
 
-  const {setUserInfo} = useContext(UserContext)
+  const { setUserInfo } = useContext(UserContext)
 
   useEffect(() => {
 
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <UserInfoComponent />
+      <ClassComponent  />
     </>
   )
 }

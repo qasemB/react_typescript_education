@@ -1,5 +1,5 @@
 import { Component } from "react";
-type PropsType = {name?: string}
+type PropsType = {name?: string, className?: string}
 type StatesType = {count: number}
   class ClassComponent extends Component<PropsType, StatesType> {
     state = {

@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react"
 import { UserContext } from "./context/UserContext"
-import ClassComponent from "./components/ClassComponent"
+import ConfirmButton from "./components/ConfirmButton"
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <ClassComponent  />
+      <ConfirmButton  />
     </>
   )
 }

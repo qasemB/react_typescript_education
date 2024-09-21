@@ -1,24 +1,13 @@
-import { useContext, useEffect } from "react"
-import { UserContext } from "./context/UserContext"
-import ConfirmButton from "./components/ConfirmButton"
+import Container from "./components/Container"
+import Info from "./components/Info"
 
 function App() {
 
-  const { setUserInfo } = useContext(UserContext)
-
-  useEffect(() => {
-
-    setUserInfo({
-      name: "qasem",
-      family: "bassaki",
-      age: 36
-    })
-
-  }, [])
-
   return (
     <>
-      <ConfirmButton  />
+      <Container Component={Info} />
+      {/* <Container Component={Select} />
+      <Container Component={Inpt} /> */}
     </>
   )
 }

@@ -1,5 +1,7 @@
 
-const Info = ({ name }: { name: string }) => {
+type InfoType<T> = { name: string, skills: T[] }
+
+const Info = <T extends { id: number }>({ name }: InfoType<T>) => {
     return (
         <div>
             name = {name}

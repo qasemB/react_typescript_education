@@ -1,10 +1,43 @@
+type ActivityType = {
+    activityField: "fron-tend" | "back-end" | "full-stack",
+}
+type TeacherType = ActivityType & {
+    isTeacher: boolean,
+    isStudent?: never,
+    isEmployee?: never,
+}
+type StudentType = ActivityType & {
+    isStudent: boolean,
+    isTeacher?: never,
+    isEmployee?: never,
+}
+type EmployeeType = ActivityType & {
+    isEmployee: boolean,
+    isTeacher?: never,
+    isStudent?: never,
+}
 
-type InfoType<T> = { name: string, skills: T[] }
+type InfoType = TeacherType | StudentType | EmployeeType
 
-const Info = <T extends { id: number }>({ name }: InfoType<T>) => {
+const Info = ({ activityField, isStudent, isTeacher, isEmployee }: InfoType) => {
     return (
         <div>
-            name = {name}
+            I am
+            {isTeacher ? "a teacher" : isStudent ? "a student" : isEmployee ? "" : "an employee"}
+            in
+            {activityField}
+            programming
+
+
+            <div>
+                {isTeacher ? (
+                    "some elements only for teachers"
+                ) : isStudent ? (
+                    "some elements only for students"
+                ) : isEmployee ? (
+                    "some elements only for employees"
+                ) : null}
+            </div>
         </div>
     );
 };

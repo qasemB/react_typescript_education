@@ -1,11 +1,10 @@
-import Info from "./components/Info"
+import SectionComponent from "./components/SectionComponent"
 
 function App() {
 
   return (
     <>
-      <Info activityField="back-end" isEmployee/>
-      <Info activityField="fron-tend" isStudent />
+      <SectionComponent bootstrapGrid="col-lg-9" />
     </>
   )
 }
